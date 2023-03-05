@@ -13,12 +13,12 @@
     "test": "../../node_modules/.bin/jest",
     "test:watch": "npm run test -- --watch",
     "test:cov": "npm run test -- --coverage",
-    "dev": "../../node_modules/.bin/nodemon --exec ts-node src/@core/infra/api/server.ts",
+    "dev": "../../node_modules/.bin/nodemon --exec ts-node src/infra/api/server.ts",
     "tsc": "../../node_modules/.bin/tsc",
     "build": "npm run tsc -- -b",
     "cti": "../../node_modules/.bin/cti",
-    "cti:@core": "sh ../../cti.sh",
-    "cti:clean": "sh ../../cti-clean.sh"
+    "cti:@core": "sh cti.sh",
+    "cti:clean": "sh cti-clean.sh"
   },
   "author": "",
   "license": "ISC",
