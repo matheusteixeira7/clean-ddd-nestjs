@@ -1,4 +1,4 @@
-import AddProductUseCase from './add-product.usecase'
+import { AddProductUseCase } from './add-product.usecase'
 
 const mockRepository = {
   add: jest.fn(),
@@ -13,7 +13,7 @@ describe('AddProductUseCase', () => {
       colors: [{ name: 'red', bgColor: '#ff0000', selectedColor: '#ff0000' }],
       description: 'A great product',
       details: [{ name: 'dimensions', items: ['10 x 20 x 30 cm'] }],
-      images: [{ id: '1', name: 'product image', src: 'http://example.com/product.jpg', alt: 'Product image' }],
+      images: [{ id: '1', name: 'product image', src: 'https://example.com/product.jpg', alt: 'Product image' }],
       name: 'Product',
       price: 99.99,
       rating: 4.5,

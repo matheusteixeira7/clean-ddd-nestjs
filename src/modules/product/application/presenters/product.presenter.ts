@@ -1,7 +1,7 @@
 import { toXML } from 'jstoxml'
-import { type CheckStockFacadeOutputDto } from '#modules/product/application/facade/product.facade.interface'
+import { type CheckStockFacadeOutputDto } from '#modules/product/application'
 
-export default class CheckProductStockPresenter {
+export class CheckProductStockPresenter {
   public static toXML (data: CheckStockFacadeOutputDto): string {
     const xmlOptions = {
       header: true,

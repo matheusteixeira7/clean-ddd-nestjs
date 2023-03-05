@@ -1,3 +1,3 @@
-export default interface ValueObject<T> {
+export interface ValueObject<T> {
   equals: (value: T) => boolean
 }

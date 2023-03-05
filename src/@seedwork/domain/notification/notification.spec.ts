@@ -1,4 +1,4 @@
-import Notification from './notification'
+import { Notification } from '#seedwork/domain'
 
 describe('Notification Unit Test', () => {
   it('should create errors', () => {

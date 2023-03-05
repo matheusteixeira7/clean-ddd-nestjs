@@ -1,7 +1,6 @@
-import Id from '#seedwork/domain/value-objects/id.value-object'
-import Notification from '#seedwork/domain/notification/notification'
+import { Id, Notification } from '#seedwork/domain'
 
-export default class BaseEntity {
+export class BaseEntity {
   private readonly _id: string
   private _createdAt: Date
   protected _updatedAt: Date

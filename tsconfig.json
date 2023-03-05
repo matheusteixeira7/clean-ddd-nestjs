@@ -31,7 +31,7 @@
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false,
     "allowJs": true,
-    "strictPropertyInitialization": true
+    "strictPropertyInitialization": true,
   },
   "include": [
     "env.d.ts",

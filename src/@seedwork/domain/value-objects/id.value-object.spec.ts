@@ -1,4 +1,4 @@
-import Id from './id.value-object'
+import { Id } from '#seedwork/domain'
 import { v4 as uuidv4, validate } from 'uuid'
 
 describe('Id Value Object', () => {
