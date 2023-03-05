@@ -1,8 +1,8 @@
 import * as yup from 'yup'
-import type Product from '#modules/product/domain/entity/product.entity'
-import type ValidatorInterface from '#seedwork/domain/validators/validator.interface'
+import { type Product } from '#modules/product/domain'
+import { type ValidatorInterface } from '#seedwork/domain'
 
-export default class ProductYupValidator implements ValidatorInterface<Product> {
+export class ProductYupValidator implements ValidatorInterface<Product> {
   validate (product: Product): void {
     try {
       const schema = yup.object().shape({

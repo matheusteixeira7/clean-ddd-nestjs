@@ -1,8 +1,7 @@
-import Product from '#modules/product/domain/entity/product.entity'
-import type ProductGateway from '#modules/product/infra/gateway/product.gateway'
-import { ProductModel } from '#modules/product/infra/repository/product.model'
+import { Product } from '#modules/product/domain'
+import { type ProductGateway, ProductModel } from '#modules/product/infra'
 
-export default class ProductRepository implements ProductGateway {
+export class ProductRepository implements ProductGateway {
   async add (product: Product): Promise<void> {
     await ProductModel.create({
       category: product.category,

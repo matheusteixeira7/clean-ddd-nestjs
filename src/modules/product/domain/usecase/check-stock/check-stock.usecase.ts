@@ -1,8 +1,8 @@
-import type ProductGateway from '#modules/product/infra/gateway/product.gateway'
-import type UseCaseInterface from '#seedwork/usecase/usecase.interface'
-import { type CheckStockInputDto, type CheckStockOutputDto } from '#modules/product/domain/usecase/check-stock/check-stock.dto'
+import { type ProductGateway } from '#modules/product/infra'
+import { type UseCaseInterface } from '#seedwork/domain'
+import { type CheckStockInputDto, type CheckStockOutputDto } from '#modules/product/domain'
 
-export default class CheckStockUseCase implements UseCaseInterface {
+export class CheckStockUseCase implements UseCaseInterface {
   private readonly _productRepository: ProductGateway
 
   constructor (productRepository: ProductGateway) {

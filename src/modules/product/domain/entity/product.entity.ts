@@ -1,7 +1,5 @@
-import BaseEntity from '#seedwork/domain/entity/base.entity'
-import NotificationError from '#seedwork/domain/notification/notification.error'
-import ProductValidatorFactory from '#modules/product/domain/factory/product.validator.factory'
-import type AggregateRoot from '#seedwork/domain/entity/aggregate-root.interface'
+import { BaseEntity, NotificationError, type AggregateRoot } from '#seedwork/domain'
+import { ProductValidatorFactory } from '#modules/product/domain'
 
 interface ProductProps {
   category: string
@@ -32,7 +30,7 @@ interface ProductProps {
   updatedAt?: Date
 }
 
-export default class Product extends BaseEntity implements AggregateRoot {
+export class Product extends BaseEntity implements AggregateRoot {
   private _category: string
   private _colors: Array<{
     name: string

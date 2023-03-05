@@ -3,7 +3,7 @@ export interface NotificationErrorProps {
   context: string
 }
 
-export default class Notification {
+export class Notification {
   private readonly errors: NotificationErrorProps[] = []
 
   addError (error: NotificationErrorProps): void {

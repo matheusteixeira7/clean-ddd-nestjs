@@ -1,6 +1,6 @@
-import type Product from '../../domain/entity/product.entity'
+import { type Product } from '#modules/product/domain'
 
-export default interface ProductGateway {
+export interface ProductGateway {
   add: (product: Product) => Promise<void>
   find: (id: string) => Promise<Product>
 }

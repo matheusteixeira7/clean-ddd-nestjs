@@ -1,7 +1,7 @@
-import type ValueObject from './value-object.interface'
+import type { ValueObject } from '#seedwork/domain'
 import { v4 as uuidv4 } from 'uuid'
 
-export default class Id implements ValueObject<Id> {
+export class Id implements ValueObject<Id> {
   private readonly _id: string
 
   constructor (id?: string) {
