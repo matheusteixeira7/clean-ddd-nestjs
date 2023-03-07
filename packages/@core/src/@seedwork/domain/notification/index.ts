@@ -1,2 +1,2 @@
-export * from './notification.error'
-export * from './notification'
+export * from './notification.error';
+export * from './notification';

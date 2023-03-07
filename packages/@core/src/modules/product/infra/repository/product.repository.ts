@@ -1,8 +1,8 @@
-import { Product } from '#modules/product/domain'
-import { type ProductGateway, ProductModel } from '#modules/product/infra'
+import { Product } from '#modules/product/domain';
+import { type ProductGateway, ProductModel } from '#modules/product/infra';
 
 export class ProductRepository implements ProductGateway {
-  async add (product: Product): Promise<void> {
+  async add(product: Product): Promise<void> {
     await ProductModel.create({
       category: product.category,
       colors: product.colors,
@@ -17,17 +17,17 @@ export class ProductRepository implements ProductGateway {
       size: product.size,
       stock: product.stock,
       subcategory: product.subcategory,
-      updatedAt: new Date()
-    })
+      updatedAt: new Date(),
+    });
   }
 
-  async find (id: string): Promise<Product> {
+  async find(id: string): Promise<Product> {
     const product = await ProductModel.findOne({
-      where: { id }
-    })
+      where: { id },
+    });
 
     if (product == null) {
-      throw new Error(`Product with id ${id} not found`)
+      throw new Error(`Product with id ${id} not found`);
     }
 
     return new Product({
@@ -44,7 +44,7 @@ export class ProductRepository implements ProductGateway {
       size: product.size,
       stock: product.stock,
       subcategory: product.subcategory,
-      updatedAt: product.updatedAt
-    })
+      updatedAt: product.updatedAt,
+    });
   }
 }

@@ -1,20 +1,23 @@
-import { toXML } from 'jstoxml'
-import { type CheckStockFacadeOutputDto } from '#modules/product/application'
+import { toXML } from 'jstoxml';
+import { type CheckStockFacadeOutputDto } from '#modules/product/application';
 
 export class CheckProductStockPresenter {
-  public static toXML (data: CheckStockFacadeOutputDto): string {
+  public static toXML(data: CheckStockFacadeOutputDto): string {
     const xmlOptions = {
       header: true,
       indent: '  ',
       newline: '\n',
-      allowEmpty: true
-    }
+      allowEmpty: true,
+    };
 
-    return toXML({
-      productStock: {
-        productId: data.productId,
-        available: data.available
-      }
-    }, xmlOptions)
+    return toXML(
+      {
+        productStock: {
+          productId: data.productId,
+          available: data.available,
+        },
+      },
+      xmlOptions,
+    );
   }
 }

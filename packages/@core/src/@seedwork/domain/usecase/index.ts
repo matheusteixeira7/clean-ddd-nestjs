@@ -1,1 +1,1 @@
-export * from './usecase.interface'
+export * from './usecase.interface';

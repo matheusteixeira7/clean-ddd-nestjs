@@ -1,46 +1,48 @@
 export interface AddProductFacadeInputDto {
-  category: string
+  category: string;
   colors: Array<{
-    name: string
-    bgColor: string
-    selectedColor: string
-  }>
+    name: string;
+    bgColor: string;
+    selectedColor: string;
+  }>;
 
-  createdAt?: Date
-  description: string
+  createdAt?: Date;
+  description: string;
   details: Array<{
-    name: string
-    items: string[]
-  }>
+    name: string;
+    items: string[];
+  }>;
 
-  id?: string
+  id?: string;
   images: Array<{
-    id: string
-    name: string
-    src: string
-    alt: string
-  }>
+    id: string;
+    name: string;
+    src: string;
+    alt: string;
+  }>;
 
-  name: string
-  price: number
-  rating: number
-  size: string[]
-  stock: number
-  subcategory: string
-  updatedAt?: Date
+  name: string;
+  price: number;
+  rating: number;
+  size: string[];
+  stock: number;
+  subcategory: string;
+  updatedAt?: Date;
 }
 
 export interface CheckStockFacadeInputDto {
-  productId: string
-  quantity: number
+  productId: string;
+  quantity: number;
 }
 
 export interface CheckStockFacadeOutputDto {
-  productId: string
-  available: boolean
+  productId: string;
+  available: boolean;
 }
 
 export interface ProductFacadeInterface {
-  addProduct: (input: AddProductFacadeInputDto) => Promise<void>
-  checkStock: (input: CheckStockFacadeInputDto) => Promise<CheckStockFacadeOutputDto>
+  addProduct: (input: AddProductFacadeInputDto) => Promise<void>;
+  checkStock: (
+    input: CheckStockFacadeInputDto,
+  ) => Promise<CheckStockFacadeOutputDto>;
 }

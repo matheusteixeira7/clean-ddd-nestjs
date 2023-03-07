@@ -11,6 +11,8 @@
     "prebuild:dev": "npm run build -w @clean-ddd-nestjs/core",
     "start:dev": "npm run build:w -w @clean-ddd-nestjs/core & npm run start:dev -w nestjs",
     "test": "jest",
+    "format": "prettier --write \"packages/@core/src/**/*.ts\" \"packages/nestjs/src/**/*.ts\" \"packages/nestjs/test/**/*.ts\"",
+    "lint": "eslint \"packages/@core/{src,apps,libs,test}/**/*.ts\" \"packages/nestjs/{src,apps,libs,test}/**/*.ts\" --fix",
     "core:build": "npm run build -w @clean-ddd-nestjs/core",
     "core:build:w": "npm run build:w -w @clean-ddd-nestjs/core",
     "core:cti": "npm run cti -w @clean-ddd-nestjs/core",

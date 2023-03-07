@@ -1,30 +1,30 @@
 export interface NotificationErrorProps {
-  message: string
-  context: string
+  message: string;
+  context: string;
 }
 
 export class Notification {
-  private readonly errors: NotificationErrorProps[] = []
+  private readonly errors: NotificationErrorProps[] = [];
 
-  addError (error: NotificationErrorProps): void {
-    this.errors.push(error)
+  addError(error: NotificationErrorProps): void {
+    this.errors.push(error);
   }
 
-  hasErrors (): boolean {
-    return this.errors.length > 0
+  hasErrors(): boolean {
+    return this.errors.length > 0;
   }
 
-  getErrors (): NotificationErrorProps[] {
-    return this.errors
+  getErrors(): NotificationErrorProps[] {
+    return this.errors;
   }
 
-  messages (context?: string): string {
-    let message = ''
+  messages(context?: string): string {
+    let message = '';
     this.errors.forEach((error) => {
       if (context === undefined || error.context === context) {
-        message += `${error.context}: ${error.message},`
+        message += `${error.context}: ${error.message},`;
       }
-    })
-    return message
+    });
+    return message;
   }
 }

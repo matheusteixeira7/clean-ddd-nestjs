@@ -1,15 +1,15 @@
-import { Product, type AddProductInputDto } from '#modules/product/domain'
-import { type ProductRepository } from '#modules/product/infra'
-import { type UseCaseInterface } from '#seedwork/domain'
+import { Product, type AddProductInputDto } from '#modules/product/domain';
+import { type ProductRepository } from '#modules/product/infra';
+import { type UseCaseInterface } from '#seedwork/domain';
 
 export class AddProductUseCase implements UseCaseInterface {
-  private readonly _productRepository: ProductRepository
+  private readonly _productRepository: ProductRepository;
 
-  constructor (productRepository: ProductRepository) {
-    this._productRepository = productRepository
+  constructor(productRepository: ProductRepository) {
+    this._productRepository = productRepository;
   }
 
-  async execute (input: AddProductInputDto): Promise<void> {
+  async execute(input: AddProductInputDto): Promise<void> {
     const props = {
       category: input.category,
       colors: input.colors,
@@ -24,10 +24,10 @@ export class AddProductUseCase implements UseCaseInterface {
       size: input.size,
       stock: input.stock,
       subcategory: input.subcategory,
-      updatedAt: input.updatedAt
-    }
+      updatedAt: input.updatedAt,
+    };
 
-    const product = new Product(props)
-    await this._productRepository.add(product)
+    const product = new Product(props);
+    await this._productRepository.add(product);
   }
 }

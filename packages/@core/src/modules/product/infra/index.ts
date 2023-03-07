@@ -1,3 +1,3 @@
-export * from './factory'
-export * from './gateway'
-export * from './repository'
+export * from './factory';
+export * from './gateway';
+export * from './repository';

@@ -1,2 +1,2 @@
-export * from './check-stock.dto'
-export * from './check-stock.usecase'
+export * from './check-stock.dto';
+export * from './check-stock.usecase';

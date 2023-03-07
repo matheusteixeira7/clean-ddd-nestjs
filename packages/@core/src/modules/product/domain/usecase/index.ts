@@ -1,2 +1,2 @@
-export * from './add-product'
-export * from './check-stock'
+export * from './add-product';
+export * from './check-stock';

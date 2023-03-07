@@ -1,1 +1,1 @@
-export * from './product.gateway'
+export * from './product.gateway';

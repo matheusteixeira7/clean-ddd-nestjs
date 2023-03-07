@@ -1,3 +1,3 @@
 export interface ValueObject<T> {
-  equals: (value: T) => boolean
+  equals: (value: T) => boolean;
 }

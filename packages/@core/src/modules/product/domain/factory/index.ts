@@ -1,1 +1,1 @@
-export * from './product.validator.factory'
+export * from './product.validator.factory';

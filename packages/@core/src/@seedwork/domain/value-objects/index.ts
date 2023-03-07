@@ -1,2 +1,2 @@
-export * from './id.value-object'
-export * from './value-object.interface'
+export * from './id.value-object';
+export * from './value-object.interface';
