@@ -143,5 +143,11 @@ dist
 
 # others
 .idea/
+.history/
+.docker/zsh/history/.zsh_history
+.docker/dbdata
+__coverage
+tsconfig.tsbuildinfo
+docker-compose.override.yaml
 
 # End of https://www.toptal.com/developers/gitignore/api/node
