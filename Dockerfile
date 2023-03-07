@@ -28,7 +28,7 @@ RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/
     -p git-flow \
     -p https://github.com/zdharma-continuum/fast-syntax-highlighting \
     -p https://github.com/zsh-users/zsh-autosuggestions \
-    -p https://github.com/zsh-users/zsh-completions \
+    -p https://github.com/zsh-users/zsh-completions
 
 RUN echo 'HISTFILE=/home/node/zsh/.zsh_history' >> ~/.zshrc
 

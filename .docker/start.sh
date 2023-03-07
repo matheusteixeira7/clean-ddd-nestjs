@@ -21,7 +21,7 @@ fi
 npm install
 
 echo "###### Building @core ######"
-npm run build -w app-core
+npm run build -w @clean-ddd-nestjs/core
 
 tail -f /dev/null
 

@@ -8,6 +8,9 @@
     "./packages/nestjs"
   ],
   "scripts": {
+    "prebuild:dev": "npm run build -w @clean-ddd-nestjs/core",
+    "start:dev": "npm run build:w -w @clean-ddd-nestjs/core & npm run start:dev -w nestjs",
+    "test": "jest",
     "core:build": "npm run build -w @clean-ddd-nestjs/core",
     "core:build:w": "npm run build:w -w @clean-ddd-nestjs/core",
     "core:cti": "npm run cti -w @clean-ddd-nestjs/core",
@@ -26,5 +29,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.2.0"
+  }
 }
