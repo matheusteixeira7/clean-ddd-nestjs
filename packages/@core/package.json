@@ -5,21 +5,23 @@
   "main": "index.js",
   "imports": {
     "#application/*": "./dist/application/*.js",
+    "#application/routes": "./dist/application/routes/index.js",
     "#infra/*": "./dist/infra/*.js",
     "#seedwork/*": "./dist/@seedwork/*.js",
     "#seedwork/domain": "./dist/@seedwork/domain/index.js",
-    "#modules/product/*": "./dist/modules/*.js",
-    "#modules/product/application": "./dist/modules/product/application/index.js",
-    "#modules/product/domain": "./dist/modules/product/domain/index.js",
-    "#modules/product/infra": "./dist/modules/product/infra/index.js"
+    "#modules/products/*": "./dist/modules/*.js",
+    "#modules/products/application": "./dist/modules/products/application/index.js",
+    "#modules/products/domain": "./dist/modules/products/domain/index.js",
+    "#modules/products/infra": "./dist/modules/products/infra/index.js"
   },
   "exports": {
     "./@seedwork/domain": "./dist/@seedwork/domain/index.js",
     "./application": "./dist/application/index.js",
+    "./application/routes": "./dist/application/routes/index.js",
     "./infra": "./dist/infra/index.js",
-    "./modules/product/application": "./dist/modules/product/application/index.js",
-    "./modules/product/domain": "./dist/modules/product/domain/index.js",
-    "./modules/product/infra": "./dist/modules/product/infra/index.js"
+    "./modules/products/application": "./dist/modules/products/application/index.js",
+    "./modules/products/domain": "./dist/modules/products/domain/index.js",
+    "./modules/products/infra": "./dist/modules/products/infra/index.js"
   },
   "typesVersions": {
     ">=4.0": {
@@ -29,14 +31,14 @@
       "application": [
         "./dist/application/index.d.ts"
       ],
-      "modules/product/application": [
-        "./dist/modules/product/application/index.d.ts"
+      "modules/products/application": [
+        "./dist/modules/products/application/index.d.ts"
       ],
-      "modules/product/domain": [
-        "./dist/modules/product/domain/index.d.ts"
+      "modules/products/domain": [
+        "./dist/modules/products/domain/index.d.ts"
       ],
-      "modules/product/infra": [
-        "./dist/modules/product/infra/index.d.ts"
+      "modules/products/infra": [
+        "./dist/modules/products/infra/index.d.ts"
       ],
       "infra": [
         "./dist/infra/index.d.ts"
@@ -44,7 +46,7 @@
     }
   },
   "scripts": {
-    "build": "npm run tsc -- -b ./tsconfig.json",
+    "build": "rimraf dist && npm run tsc -- -b ./tsconfig.json",
     "build:w": "npm run tsc -- -b ./tsconfig.json -w",
     "cti": "cti",
     "cti:@core": "sh cti.sh",

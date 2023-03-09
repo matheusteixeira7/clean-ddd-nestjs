@@ -33,6 +33,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@nestjs/mapped-types": "*",
     "chalk": "^5.2.0"
   }
 }
